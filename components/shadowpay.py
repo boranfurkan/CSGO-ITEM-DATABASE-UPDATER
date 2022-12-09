@@ -17,6 +17,7 @@ class Shadow:
             self._dict[item_name] = {}
             self._dict[item_name]["price"] = item_price
             self._dict[item_name]["count"] = item_count
+        return self._dict
 
     def get_dict(self):
         return self._dict

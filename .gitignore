@@ -128,4 +128,4 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-hellcase_keys.json
+components/hellcase_keys.json

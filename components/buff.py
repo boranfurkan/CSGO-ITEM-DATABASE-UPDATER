@@ -11,6 +11,13 @@ class Buff:
 
     async def get_items(self):
         print("running buff")
+
+        def price_beautify(item_price):
+            item_price_str = str(item_price)
+            item_price_len = len(item_price_str)
+            item_price_converted = f"{str(item_price_str)[:(item_price_len - 2)]}." + f"{item_price_str[item_price_len - 2:]}"
+            return float(item_price_converted).__round__(2)
+
         response = requests.get(self._URI).json()
         for name, response_attr in response.items():
             item_name = name
@@ -18,9 +25,10 @@ class Buff:
             difference = self.get_difference(response_attr)
             for attr in self.__base_attributes:
                 if attr not in difference:
-                    self._dict[item_name][attr] = response_attr[attr]
+                    self._dict[item_name][attr] = price_beautify(response_attr[attr])
                 else:
                     self._dict[item_name][attr] = 0
+        return self._dict
 
     def get_dict(self):
         return self._dict

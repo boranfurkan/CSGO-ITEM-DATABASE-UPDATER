@@ -22,7 +22,7 @@ class Empire:
             item_price_str = str(item_price)
             item_price_len = len(item_price_str)
             item_price_converted = f"{str(item_price_str)[:(item_price_len - 2)]}." + f"{item_price_str[item_price_len - 2:]}"
-            return item_price_converted
+            return float(item_price_converted).__round__(2)
 
         for page in range(1, get_last_page_info()):
             response = requests.get(
@@ -41,6 +41,7 @@ class Empire:
                     self._dict[item_name]["price"] = item_price
                     self._dict[item_name]["count"] = 1
         await asyncio.sleep(0.5)
+        return self._dict
 
     def set_empty_dict(self):
         self._dict = {}

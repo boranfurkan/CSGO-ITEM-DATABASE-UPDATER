@@ -32,3 +32,4 @@ def fill_schema(name: str, hellcaseSuggested: float, shadowSuggested: float, sha
         "itemImageURI": itemImageURI,
         "updatedAt": datetime.datetime.now()
     }
+    return document_schema

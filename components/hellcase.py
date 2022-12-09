@@ -2,7 +2,7 @@ import gspread
 
 
 def connect_spreadsheet():
-    service_account = gspread.service_account(filename="../hellcase_keys.json")
+    service_account = gspread.service_account(filename="components/hellcase_keys.json")
     sheet = service_account.open("Hellcase Data")
     worksheet = sheet.worksheet("Sheet1")
     return worksheet.get_all_records()
@@ -18,6 +18,7 @@ class Hellcase:
             item_name = item["ITEM"]
             item_price = item["PRICE"]
             self._dict[item_name] = item_price
+        return self._dict
 
     def get_dict(self):
         return self._dict

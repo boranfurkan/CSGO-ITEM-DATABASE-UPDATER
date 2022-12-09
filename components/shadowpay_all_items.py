@@ -12,9 +12,13 @@ class ShadowAll:
         for item in response["data"]:
             item_name = item["steam_market_hash_name"]
             suggested_price = float(item["suggested_price"])
+            icon = item["icon"]
             if suggested_price > 35:
                 if item_name[:7] != "Sticker":
-                    self._dict[item_name] = suggested_price
+                    self._dict[item_name] = {}
+                    self._dict[item_name]["suggested_price"] = suggested_price
+                    self._dict[item_name]["icon"] = icon
+        return self._dict
 
     def get_dict(self):
         return self._dict
