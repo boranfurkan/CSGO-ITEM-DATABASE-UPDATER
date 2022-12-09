@@ -1,4 +1,4 @@
-from db import Database
+from db.db import Database
 import os
 from dotenv import load_dotenv, find_dotenv
 
