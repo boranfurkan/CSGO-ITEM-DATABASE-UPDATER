@@ -1,5 +1,4 @@
 import asyncio
-
 import requests
 
 
@@ -11,7 +10,7 @@ class Empire:
         }
 
     async def get_items(self):
-        print("running empire")
+        print("Running Empire")
 
         def get_last_page_info():
             return requests.get("https://csgoempire.com/api/v2/trading/items?per_page=2500&page=1&price_min=4000"

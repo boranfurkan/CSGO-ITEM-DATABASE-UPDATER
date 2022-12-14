@@ -7,7 +7,7 @@ class Market:
         self._dict = {}
 
     async def get_items(self):
-        print("running market")
+        print("Running CSGO Market")
         response = requests.get(self.URI).json()
         for item in response["items"]:
             item_name = item["market_hash_name"]

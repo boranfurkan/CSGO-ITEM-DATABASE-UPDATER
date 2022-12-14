@@ -7,7 +7,7 @@ class ShadowAll:
         self._dict = {}
 
     async def get_items(self):
-        print("running shadowall")
+        print("Running Shadowall")
         response = requests.get(self.URI).json()
         for item in response["data"]:
             item_name = item["steam_market_hash_name"]

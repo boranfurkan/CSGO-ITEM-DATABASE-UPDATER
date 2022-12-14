@@ -10,7 +10,7 @@ class Buff:
                                   "buff163_quick"]
 
     async def get_items(self):
-        print("running buff")
+        print("Running Buff")
 
         def price_beautify(item_price):
             item_price_str = str(item_price)
