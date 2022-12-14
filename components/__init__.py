@@ -93,3 +93,13 @@ async def get_all_items():
 
         all_schemas.append(new_schema)
     return all_schemas
+
+
+def delete_all_dicts():
+    buff.set_empty_dict()
+    csgo_empire.set_empty_dict()
+    csgo_market.set_empty_dict()
+    hellcase.set_empty_dict()
+    shadowpay.set_empty_dict()
+    shadowpay_all.set_empty_dict()
+    return "Successfully deleted all dictionaries."
