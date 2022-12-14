@@ -1,0 +1,4 @@
+gspread==5.4.0
+pymongo==4.3.3
+python-dotenv==0.21.0
+requests==2.26.0

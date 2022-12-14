@@ -5,6 +5,7 @@ def fill_schema(name: str, hellcaseSuggested: float, shadowSuggested: float, sha
                 csgoEmpire: float, shadowCount: int, csgoMarketCount: int, csgoEmpireCount: int, listing: float,
                 listing7: float, listing30: float, listing60: float, listing90: float,
                 buyOrder: float, itemImageURI: str):
+
     document_schema = {
         "name": name,
         "suggestedPrice": {
