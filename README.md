@@ -2,13 +2,13 @@
 - Real time price updater for CSGO item database.
 - Price comparison bot for most CSGO marketplaces.
 
-Swagger UI
+#### Swagger UI
 - Documentation can be found in "https://csgo-items--api.herokuapp.com/api-docs/"
 
 #### Setup
 
 ```bash
-pip install requirements.txt
+pip install -r requirements.txt && python3 main.py
 ```
 
 #### Environment Variables
